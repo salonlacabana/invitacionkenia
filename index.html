@@ -38,6 +38,7 @@
 
 
       <div class="countdown-container gold-border mt-lg">
+        <img src="src/assets/corona.png" alt="Corona" class="corona-img mb-sm" />
         <h2 class="cinzel-font text-xxl mb-sm">Faltan</h2>
         <div class="countdown" id="countdown">
           <div class="time-box"><span class="number cinzel-font" id="days">00</span><span
@@ -59,8 +60,8 @@
     <section class="quote-section reveal slide-up">
       <div class="quote-content">
         <p class="cinzel-font gold-text text-lg">
-          "Mi vida ha sido como un libro, cada año es un capítulo que con esfuerzo y dedicación he escrito. El día de
-          hoy concluyo aquella etapa llamada niñez y comienzo un nuevo camino al cumplir mis XV años."
+          "Hoy se cierra una hermosa etapa de juegos y sonrisas infantiles. Con orgullo y emoción, le doy la bienvenida
+          a mis quince años y a todo lo que está por venir."
         </p>
       </div>
     </section>
@@ -92,7 +93,8 @@
 
     <!-- Section 5: Date -->
     <section class="date-section text-center reveal slide-up">
-      <h2 class="cinzel-font gold-text text-xxl mb-lg">Día del evento</h2>
+      <h2 class="cinzel-font gold-text text-xxl mb-sm">Día del evento</h2>
+      <img src="src/assets/corona.png" alt="Corona" class="corona-img mb-lg" />
       <div class="date-calendar">
         <div class="calendar-inner gold-border">
           <span class="date-month gold-text cinzel-font text-lg border-bottom">JULIO</span>
@@ -107,6 +109,7 @@
 
     <!-- Section 6: Ceremony & Reception -->
     <section class="locations-section reveal slide-up pattern-bg">
+      <h2 class="cinzel-font gold-text text-xxl mb-lg">¿Dónde & Cuándo?</h2>
       <div class="location-card gold-border">
         <div class="location-image" style="background-image: url('src/assets/ceremonia.jpg');">
           <div class="location-image-overlay">
@@ -140,7 +143,7 @@
       </div>
     </section>
 
-    <!-- Section 7: Dress Code & Gifts -->
+    <!-- Section 7: -->
     <section class="info-section text-center reveal slide-up">
       <div class="info-card">
         <div class="icon gold-text mb-sm">
@@ -151,35 +154,63 @@
           </svg>
         </div>
         <h3 class="cinzel-font red-text text-xl mb-sm">Código de Vestimenta</h3>
-        <p class="sans-font text-white mb-xs">Formal</p>
-        <p class="sans-font gold-text text-sm">Se reserva el color Rojo y Negro</p>
+        <p class="sans-font text-white mb-md">Formal</p>
+
+        <div class="dress-code-images mb-md">
+          <div class="dress-code-item">
+            <img src="src/assets/traje.png" alt="Traje" />
+            <p class="sans-font text-white text-sm mt-xs">Traje</p>
+          </div>
+          <div class="dress-code-item">
+            <img src="src/assets/vestido.png" alt="Vestido" />
+            <p class="sans-font text-white text-sm mt-xs">Vestido</p>
+          </div>
+        </div>
+
+        <p class="sans-font gold-text text-sm">Se reserva el color <strong>Rojo</strong></p>
       </div>
 
-      <div class="info-card mt-lg">
-        <div class="icon gold-text mb-sm">
-          <!-- Envelope icon placeholder -->
-          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
-            <path d="M16 2v4M8 2v4M3 10h18" />
-          </svg>
+      <div class="gifts-wrapper mt-lg"
+        style="position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; max-width: 500px; width: 100%;">
+        <div class="info-card">
+          <div class="icon gold-text mb-sm">
+            <!-- Envelope icon placeholder -->
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+          </div>
+          <h3 class="cinzel-font red-text text-xl mb-sm">Regalos</h3>
+          <p class="sans-font text-white text-md">Mi mayor obsequio es que celebres conmigo en este dia tan especial</p>
+          <p class="sans-font text-white text-md mt-xs">Si deseas obsequiarme algo, contaremos
+            con <strong>Lluvia de Sobres</strong> o <strong>Mesa de Regalos</strong>.</p>
         </div>
-        <h3 class="cinzel-font red-text text-xl mb-sm">Regalos</h3>
-        <p class="sans-font text-white text-md">Mi mejor regalo es que me acompañes a festejar en este dia tan especial.
-          Si deseas obsequiarme algo, contaremos
-          con <strong>Lluvia de Sobres</strong> o <strong>Mesa de Regalos</strong>.</p>
+
+        <div class="dress-code-images mt-lg mb-md">
+          <div class="dress-code-item">
+            <img src="src/assets/sobres.png" alt="Lluvia de Sobres" />
+            <p class="sans-font gold-text text-md">Lluvia de Sobres</p>
+          </div>
+          <div class="dress-code-item">
+            <img src="src/assets/regalos.png" alt="Mesa de Regalos" />
+            <p class="sans-font gold-text text-md">Mesa de Regalos</p>
+          </div>
+        </div>
+
+        <!-- Contenedor para la animación de regalos -->
+        <div class="gifts-anim-container"></div>
       </div>
     </section>
 
     <!-- Section 8: Gallery & QR -->
     <section class="gallery-section text-center reveal slide-up pattern-bg">
       <h2 class="script-font red-text text-xxxl mb-lg">Galería Fotográfica</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item" style="background-image: url('src/assets/xv2.jpeg');">
-        </div>
-        <div class="gallery-item" style="background-image: url('src/assets/xv3.jpeg');">
-        </div>
-        <div class="gallery-item" style="background-image: url('src/assets/xv5.jpeg');">
-        </div>
+      <div class="gallery-slideshow mx-auto">
+        <div class="gallery-slide active" style="background-image: url('src/assets/xv1.jpeg');"></div>
+        <div class="gallery-slide" style="background-image: url('src/assets/xv2.jpeg');"></div>
+        <div class="gallery-slide" style="background-image: url('src/assets/xv3.jpeg');"></div>
+        <div class="gallery-slide" style="background-image: url('src/assets/xv4.jpeg');"></div>
+        <div class="gallery-slide" style="background-image: url('src/assets/xv5.jpeg');"></div>
       </div>
 
       <div class="qr-section gold-border mt-xl">
@@ -191,11 +222,28 @@
       </div>
     </section>
 
+    <!-- Section 9: RSVP -->
+    <section class="rsvp-section text-center reveal slide-up">
+      <div class="info-card gold-border" style="padding: 3rem 2rem; background: rgba(0,0,0,0.5);">
+        <h2 class="cinzel-font red-text text-xxl mb-sm">Asistencia</h2>
+        <p class="sans-font text-white text-md mb-lg">Por favor, confirma tu asistencia para poder organizar juntos este gran día.</p>
+        <a href="https://wa.me/521234567890?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Kenia" 
+           target="_blank" 
+           class="gold-btn filled-btn sans-font uppercase"
+           style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 5px;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          </svg>
+          Confirmar por WhatsApp
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer-section text-center reveal slide-up">
       <div class="floral-divider mb-lg"></div>
-      <h3 class="script-font red-text text-xxl mb-lg mx-auto max-w-md">"Hay momentos en la vida que son irrepetibles, y
-        compartirlos con las personas que más quieres los hace inolvidables."</h3>
+      <h3 class="script-font red-text text-xxl mb-lg mx-auto max-w-md">"Un instante mágico solo es perfecto si tengo a
+        mi lado a quienes le dan sentido a mi mundo. Gracias por ser parte de este día."</h3>
       <h2 class="hero-title script-font gold-text text-xxxxl">Kenia Giovanna</h2>
       <div class="floral-divider mt-lg"></div>
     </footer>

@@ -296,6 +296,13 @@ section {
 }
 
 /* Countdown */
+.corona-img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .countdown {
   display: flex;
   justify-content: center;
@@ -443,26 +450,34 @@ section {
 }
 
 /* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+.gallery-slideshow {
+  position: relative;
   width: 100%;
-  max-width: 1000px;
-  margin-top: 2rem;
+  max-width: 800px;
+  height: 450px;
+  margin: 2rem auto;
+  border: 2px solid var(--color-gold);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: #000;
 }
 
-.gallery-item {
-  height: 300px;
+.gallery-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  border-color: var(--color-gold);
+.gallery-slide.active {
+  opacity: 1;
   z-index: 2;
 }
 
@@ -637,6 +652,55 @@ section {
   }
 }
 
+/* Gifts Animation Overlay */
+.gifts-anim-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gift-anim-item {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  animation: fall linear infinite;
+}
+
+/* Ensure info-cards stay above animation */
+.info-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dress Code Images */
+.dress-code-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dress-code-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dress-code-item img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  /* Optional: filter to make them white if they are black icons, adjust as needed */
+  /* filter: invert(1) opacity(0.8); */
+}
+
 /* Responsive */
 @media (min-width: 768px) {
   .locations-section {
@@ -650,7 +714,8 @@ section {
     gap: 4rem;
   }
 
-  .info-card.mt-lg {
+  .info-card.mt-lg,
+  .gifts-wrapper.mt-lg {
     margin-top: 0;
   }
 }

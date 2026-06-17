@@ -5,7 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initAudioPlayer();
   createPetals();
+  createGiftsAnimation();
+  initGallerySlideshow();
 });
+
+// 6. Gallery Slideshow
+function initGallerySlideshow() {
+  const slides = document.querySelectorAll('.gallery-slide');
+  if(slides.length === 0) return;
+
+  let currentSlide = 0;
+  
+  setInterval(() => {
+    // Remove active class from current slide
+    slides[currentSlide].classList.remove('active');
+    
+    // Move to next slide
+    currentSlide = (currentSlide + 1) % slides.length;
+    
+    // Add active class to new slide
+    slides[currentSlide].classList.add('active');
+  }, 3500); // Change image every 3.5 seconds
+}
 
 // 1. Scroll Reveal Animation using Intersection Observer
 function initScrollReveal() {
@@ -118,6 +139,40 @@ function createPetals() {
       petal.style.animationDelay = `${animDelay}s`;
       
       container.appendChild(petal);
+    }
+  });
+}
+
+// 5. Create falling gifts (envelopes and bows/gifts)
+function createGiftsAnimation() {
+  const containers = document.querySelectorAll('.gifts-anim-container');
+  if(containers.length === 0) return;
+
+  const itemCount = 15; // less items than petals so it's not too crowded
+  const images = ['src/assets/sobres.png', 'src/assets/regalos.png']; // User said "sobres y moños", regalos.png contains gifts with bows
+
+  containers.forEach(container => {
+    for (let i = 0; i < itemCount; i++) {
+      const item = document.createElement('div');
+      item.classList.add('gift-anim-item');
+      
+      // Randomly pick envelope or gift
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      item.style.backgroundImage = `url('${randomImage}')`;
+      
+      // Randomize properties
+      const size = Math.random() * 20 + 20; // 20px to 40px, bigger than petals
+      const left = Math.random() * 100; // 0% to 100%
+      const animDuration = Math.random() * 7 + 7; // 7s to 14s, slightly slower
+      const animDelay = Math.random() * 5; // 0s to 5s
+      
+      item.style.width = `${size}px`;
+      item.style.height = `${size}px`;
+      item.style.left = `${left}%`;
+      item.style.animationDuration = `${animDuration}s`;
+      item.style.animationDelay = `${animDelay}s`;
+      
+      container.appendChild(item);
     }
   });
 }
